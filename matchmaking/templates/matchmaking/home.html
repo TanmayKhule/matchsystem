@@ -1,0 +1,6 @@
+<!-- In home.html -->
+<form method="post" action="{% url 'home' %}"> <!-- Ensure this points to the right URL -->
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Get Recommendations</button>
+</form>

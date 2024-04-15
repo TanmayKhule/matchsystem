@@ -1,0 +1,13 @@
+<h2>Recommendations</h2>
+{% if recommendations %}
+<ul>
+    {% for professor in recommendations %}
+    <li>{{ professor.Professor_GUID }} - Score: {{ professor.Similarity_Score }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No recommendations found.</p>
+{% endif %}
+<a href="/">Try another student</a>
+
+
